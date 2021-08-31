@@ -1,0 +1,66 @@
+{%extends "base.html"%}
+
+{%block content%}
+<center>
+    <form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+        <div class="container">
+            <div class="header">
+                <div class="left">
+                    <img src="{{url_for('static', filename='img/google.png')}}" />
+
+                    <div>Translate</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <button class="activate">
+                    <img src="{{url_for('static', filename='img/translate.png')}}" alt="" />
+                    <span id="btn-text">Dịch</span>
+                </button type="submit" id="btn">
+                <!-- <button>
+                    <img src="{{url_for('static', filename='img/google-doc.png')}}" alt="" /><span>Tài liệu</span>
+                </button> -->
+            </div>
+
+            <div class="contain">
+                <div class="trans trans-text row activate">
+                    <div class="text-left">
+                        <div class="text-left-top">
+                            <p>Anh</p>
+                        </div>
+                        <div class="text-left-bottom">
+                            <textarea name="english" id="english" col=" 2" row="10" maxlength="360" autofocus
+                                placeholder="Nhập văn bản">{{en_input}}</textarea>
+
+                        </div>
+                        <div class="text-english-bottom">
+                            <div class="media">
+                                <img src="{{url_for('static', filename='img/microphone.png')}}" alt="" />
+
+                                <img src="{{url_for('static', filename='img/volume.png')}}" alt="" />
+
+                            </div>
+                            <div id="count">
+                                <span id="current_count">0</span>
+                                <span id="maximum_count">/ 300</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <div class="text-right-top">
+                            <p>Việt</p>
+                        </div>
+                        <div class="text-right-bottom">
+                            <textarea name="vietnam" id="vietnam" disabled placeholder="Bản Dịch">
+                                {{vi_output}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</center>
+
+{%endblock%}
