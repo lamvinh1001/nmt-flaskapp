@@ -4,5 +4,6 @@ gunicorn==20.0.4
 nltk==3.4.5
 numpy==1.19.5
 pathlib==1.0.1
-torch==1.9.0+cu111 --find-links https://download.pytorch.org/whl/torch_stable.htmltorch==1.9.0+cu111 -find-links https://download.pytorch.org/whl/torch_stable.html
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.8.1+cu111
 torchtext==0.6.0
